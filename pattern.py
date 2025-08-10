@@ -339,4 +339,57 @@ for i in range(row):
 # * *             * * 
 # *                 * 
 
+
 # ?
+
+
+row=5
+for i in range(row):
+    val=65
+    print(" "*(row-i), end="")
+    for j in range(2*i+1):
+        if( j==0 or i==row-1 or j==i ):
+            print(f"{chr(val)} ", end="") 
+        else:
+            print(" "*(j+1), end="")
+        val+=1    
+    print()
+#       A
+#      A B   
+#     A   C         
+#    A      D                  
+#   A B C D E F G H I
+
+row=5
+for i in range(row):
+    val=65
+    print(" "*(row-i), end="")
+    for j in range(i):
+            print(f"{chr(val)}", end="") 
+            val+=1 
+    for j in range(i - 2, -1, -1):
+        print(chr(65 + j), end="")   
+    print()
+
+#     A
+#    ABA
+#   ABCBA
+#  ABCDCBA
+# ABCDEDCBA
+
+row=5
+col=5
+for i in range(row):
+    val=65
+    print(' '*(row-i),end='')
+    for j in range(col):
+        if j<=i:
+            print(chr(val), end=' ')
+            val+=1
+    print()
+
+#      A 
+#     A B 
+#    A B C 
+#   A B C D 
+#  A B C D E 
